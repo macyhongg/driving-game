@@ -5,9 +5,11 @@
 
 body {
   background-color: #525351;
+  margin-top: 5%;
 }
 
 img {
   max-width: 20%;
+  height: auto;
   transform: rotate(180deg);
 }
