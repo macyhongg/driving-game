@@ -3,13 +3,21 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background-color: #525351;
   margin-top: 5%;
+  margin-left: 1%;
 }
 
 img {
   max-width: 20%;
   height: auto;
+  position: absolute;
   transform: rotate(180deg);
 }
