@@ -19,14 +19,20 @@ var coordX = $car.offsetLeft;
 // var coordY = $car.offsetTop;
 
 // Start the car
+var clear;
 document.addEventListener('keydown', go);
 function go(e) {
   if (e.key === ' ') {
-    // console.log(coordX);
-    setInterval(() => {
-      coordX += 20;
-      $car.style.left = `${coordX}px`;
-    }, 16);
+    clear = setInterval(move, 16);
+  }
+}
 
+function move() {
+  coordX += 0.75;
+  $car.style.left = `${coordX}%`;
+  if (coordX > 100) {
+    clearInterval(clear);
+    coordX = 0;
+    $car.style.left = '0%';
   }
 }
